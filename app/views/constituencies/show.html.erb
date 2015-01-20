@@ -1,29 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Number:</strong>
+  <strong>Numer:</strong>
   <%= @constituency.number %>
 </p>
 
 <p>
-  <strong>Name:</strong>
+  <strong>Nazwa:</strong>
   <%= @constituency.name %>
 </p>
 
 <p>
-  <strong>Town:</strong>
+  <strong>Miejscowość:</strong>
   <%= @constituency.town %>
 </p>
 
 <p>
-  <strong>Seats:</strong>
+  <strong>Ilość mandatów:</strong>
   <%= @constituency.seats %>
 </p>
 
 <p>
-  <strong>Electors:</strong>
+  <strong>Liczba osób uprawnionych do głosowania:</strong>
   <%= @constituency.electors %>
 </p>
 
-<%= link_to 'Edit', edit_constituency_path(@constituency) %> |
-<%= link_to 'Back', constituencies_path %>
+<%= link_to 'Edytuj', edit_constituency_path(@constituency) %> |
+<%= link_to 'Wróć', constituencies_path %>

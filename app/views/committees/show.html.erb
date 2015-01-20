@@ -1,9 +1,8 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Name:</strong>
-  <%= @committee.name %>
+  <strong><%= @committee.name %><strong>
 </p>
 
-<%= link_to 'Edit', edit_committee_path(@committee) %> |
-<%= link_to 'Back', committees_path %>
+<%= link_to 'Edytuj', edit_committee_path(@committee) %> |
+<%= link_to 'Wróć', committees_path %>
