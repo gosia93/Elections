@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+  
+<p>
+  <strong>Committee:</strong>
+  <%= @result.committee_id %>
+</p>
+
+<p>
+  <strong>Constituency:</strong>
+  <%= @result.constituency_id %>
+</p>
+
+<p>
+  <strong>Amount:</strong>
+  <%= @result.amount %>
+</p>
+
+<%= link_to 'Edytuj', edit_result_path(@result) %> |
+<%= link_to 'Wróć', results_path %>

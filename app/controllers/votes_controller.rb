@@ -1,4 +1,5 @@
 class VotesController < ApplicationController
+  before_filter :authenticate_user!
   before_action :set_vote, only: [:show, :edit, :update, :destroy]
 
   # GET /votes
@@ -69,6 +70,6 @@ class VotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vote_params
-      params.require(:vote).permit(:committee, :constituency, :amount)
+      params.require(:vote).permit(:committee_id, :constituency_id, :amount)
     end
 end

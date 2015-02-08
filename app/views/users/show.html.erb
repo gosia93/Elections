@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nazwa:</strong>
+  <%= @user.name %>
+</p>
+
+<p>
+  <strong>Rola:</strong>
+  <%= @user.role.name %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @user.email %>
+</p>
+<p>
+  <strong>Joined on:</strong>
+  <%= @joined_on %>
+</p>
+<p>
+  <strong>Ostatnie logowanie:</strong>
+    <%= @last_login %>
+</p>
+<p>
+  <strong>No. times logges in:</strong>
+  <%= @user.sign_in_count %>
+</p>
+
+<%= link_to 'Edytuj', edit_user_path(@user) %> |
+<%= link_to 'Wróć', users_path %>

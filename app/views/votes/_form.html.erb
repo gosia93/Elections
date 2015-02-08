@@ -13,11 +13,13 @@
 
   <div class="field">
     <p>Komitet:</p>
-    <%= f.number_field :committee %>
+     <%= f.label :commiettee_id %><br>
+    <%= collection_select(:vote, :commiettee_id, Committee.all, :id,  :name, {prompt: true}) %>
   </div>
   <div class="field">
     <p>Okręg:</p>
-    <%= f.number_field :constituency %>
+     <%= f.label :constituency_id %><br>
+    <%= collection_select(:vote, :constituency_id, Constituency.all, :id, :name, {prompt: true}) %>
   </div>
   <div class="field">
     <p>Wynik:</p>

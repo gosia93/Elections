@@ -43,5 +43,6 @@ group :development, :test do
   gem 'spring'
   gem 'activeadmin', github: 'activeadmin'
   gem 'devise'
+  gem 'cancancan', '~> 1.10'
 end
 

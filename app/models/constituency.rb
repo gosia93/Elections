@@ -5,6 +5,6 @@ class Constituency < ActiveRecord::Base
    validates :seats, presence: true
    validates :electors, presence: true
 
- # has_and_belongs_to_many :committee
-   has_many :vote
+ 
+   has_many :result
 end
