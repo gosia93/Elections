@@ -1,11 +1,13 @@
 class CommitteesController < ApplicationController
   before_filter :authenticate_user!
-  before_action :set_committee, only: [:show, :edit, :update, :destroy]
+  load_and_authorize_resource
+
+ # before_action :set_committee, only: [:show, :edit, :update, :destroy]
 
   # GET /committees
   # GET /committees.json
   def index
-    @committees = Committee.all
+   # @committees = Committee.all
   end
 
   # GET /committees/1
@@ -15,7 +17,7 @@ class CommitteesController < ApplicationController
 
   # GET /committees/new
   def new
-    @committee = Committee.new
+   # @committee = Committee.new
   end
 
   # GET /committees/1/edit
@@ -25,7 +27,7 @@ class CommitteesController < ApplicationController
   # POST /committees
   # POST /committees.json
   def create
-    @committee = Committee.new(committee_params)
+   # @committee = Committee.new(committee_params)
 
     respond_to do |format|
       if @committee.save
@@ -64,9 +66,9 @@ class CommitteesController < ApplicationController
 
   private
     # Use callbacks to share common setup or constraints between actions.
-    def set_committee
-      @committee = Committee.find(params[:id])
-    end
+   # def set_committee
+     # @committee = Committee.find(params[:id])
+   # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def committee_params

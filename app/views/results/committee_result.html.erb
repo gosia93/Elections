@@ -15,7 +15,7 @@
     <% @results.each do |result| %>
       <tr>
         <td><%= result.committee_id %></td>
-        <td><%= result.amount %></td>
+        <td><%= Result.sum %></td>
         <td><%= link_to 'Show', result %></td>
         <td><%= link_to 'Edit', edit_result_path(result) %></td>
         <td><%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %></td>

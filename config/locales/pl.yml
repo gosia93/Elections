@@ -1,0 +1,8 @@
+pl:
+  unauthorized:
+    default: "Wystąpił Błąd!"
+    manage:
+      all: "Nie jesteś upoważniony do %{action} %{subject}."
+      user: "Nie jesteś upoważniony."
+    update:
+      project: "Nie jesteś upoważniony."

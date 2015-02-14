@@ -1,5 +1,9 @@
 ActiveAdmin.setup do |config|
-  # == Site Title
+
+ # config.authorization_adapter = ActiveAdmin::CanCanAdapter
+ # config.on_unauthorized_access = :access_denied
+ # config.cancan_ability_class = "MyCustomAbility" 
+ # == Site Title
   #
   # Set the title that is displayed on the main layout
   # for each of the active admin pages.

@@ -1,4 +1,4 @@
-ActiveAdmin.register Vote do
+ActiveAdmin.register Result do
 
 end
 

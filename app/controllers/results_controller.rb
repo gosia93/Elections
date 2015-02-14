@@ -1,4 +1,4 @@
-class ResultsController < InheritedResources::Base
+class ResultsController < ApplicationController
 before_filter :authenticate_user!
 load_and_authorize_resource
 # GET /results
