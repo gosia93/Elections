@@ -11,7 +11,7 @@ def show
 end
 # GET /results/new
 def new
-@item = Result.new
+@result = Result.new
 end
 # GET /results/1/edit
 def edit
@@ -52,10 +52,19 @@ format.json { head :no_content }
 end
 end
 
+def sum
+  @suma
+respond_to do |format|
+format.html { render :sum }
+format.json { head :no_content }
+end
+logger.debug { @suma.inspect }   
+end
   private
 
     def result_params
       params.require(:result).permit(:committee_id, :constituency_id, :amount)
     end
 end
+
 

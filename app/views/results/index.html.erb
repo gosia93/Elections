@@ -1,31 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Listing Results</h1>
+<h1>Wyniki</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Committee</th>
-      <th>Constituency</th>
-      <th>Amount</th>
+      <th>Komitet</th>
+      <th>Okręg</th>
+      <th>Głosy</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @results.each do |result| %>
+  <% @results.each do |result| %>
       <tr>
-        <td><%= result.committee_id %></td>
-        <td><%= result.constituency_id %></td>
+        <td><%= result.committee.name %></td>
+        <td><%= result.constituency.name %></td>
         <td><%= result.amount %></td>
-        <td><%= link_to 'Show', result %></td>
-        <td><%= link_to 'Edit', edit_result_path(result) %></td>
-        <td><%= link_to 'Destroy', result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Wyświetl', result %></td>
+        <td><%= link_to 'Edytuj', edit_result_path(result) %></td>
+        <td><%= link_to 'Usuń', result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
-
 <br>
 
 <%= link_to 'New Result', new_result_path %>

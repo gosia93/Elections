@@ -2,9 +2,10 @@ class Result < ActiveRecord::Base
    validates :committee, presence: true
    validates :constituency, presence: true
    validates :amount, presence: true
-   
-   def sum 
-     Result.sum("amount")
+
+   def sum
+   @suma = Result.all(:select => "committee_id, SUM(amount) as wynik",
+                      :group => "committee_id")
    end
 
    belongs_to :committee

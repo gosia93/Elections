@@ -6,5 +6,5 @@ class Constituency < ActiveRecord::Base
    validates :electors, presence: true
 
  
-   has_many :result
+   has_many :results
 end
