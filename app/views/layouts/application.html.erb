@@ -8,7 +8,7 @@
 </head>
 <body>
 <% if user_signed_in? %>
-   Signed in as <%= current_user.email %>. Not you?
+   <%= current_user.email %>. 
    <%= link_to "Edytuj profil", edit_user_registration_path %>
    <%= link_to "Wyloguj", destroy_user_session_path, :method => :delete %>
 <% else %>

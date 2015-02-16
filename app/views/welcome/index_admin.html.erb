@@ -1,0 +1,29 @@
+<body>
+  <div id="header">
+    <h1>Witaj!</h1>
+  </div>
+  <div id="content">
+     <div id="menu">
+       <ul>Menu</ul>
+        <% if current_user.admin? %>
+          <li>
+             <%= link_to 'Użytkownicy', users_path(@user) %><br>
+          </li>
+        <% end %>
+          <li>
+             <%= link_to 'Okręgi', constituencies_path(@constituency) %><br>
+          </li>
+          <li>
+             <%= link_to 'Komitety', committees_path(@committee) %><br>
+          </li>
+          <li>
+             <%= link_to 'Wyniki', results_path(@result) %><br>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div id="footer">
+      <h6>Małgorzata Koselak, EPI UJ</h6>
+    </div>
+</div>
+</body>

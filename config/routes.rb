@@ -1,33 +1,33 @@
 Rails.application.routes.draw do
 
 
-  devise_for :admin_users, ActiveAdmin::Devise.config
-  ActiveAdmin.routes(self) 
-  resources :results
-  resources :committees
-  resources :constituencies
-  resources :users
-  resources :roles
+ # devise_for :admin_users, ActiveAdmin::Devise.config
+ # ActiveAdmin.routes(self) 
+ # resources :results
+ # resources :committees
+ # resources :constituencies
+ # resources :users
+ # resources :roles
  
  devise_for :users
-#  scope "/admini" do
+ scope "/admin" do
   resources :users
- # end
+  end
 
-
- # resources :roles
+  resources :users
+  resources :roles
  resources :committees
  resources :constituencies
- resources :results
+ resources :results do
+  member do
+    get 'sum'
+  end
+ end 
 
  authenticated :user do
-   
-
-      root :to => 'constituencies#index', as: :authenticated_root
-  end
+     root :to => 'welcome#index_admin', as: :authenticated_root
+   end
       root :to => 'welcome#index'
-
- # get 'results/sum' 
 
   end
 

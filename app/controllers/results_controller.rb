@@ -54,12 +54,10 @@ end
 
 def sum
   @suma
-respond_to do |format|
-format.html { render :sum }
-format.json { head :no_content }
+  redirect_to(results_path)
 end
 logger.debug { @suma.inspect }   
-end
+
   private
 
     def result_params

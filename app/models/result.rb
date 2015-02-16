@@ -6,7 +6,8 @@ class Result < ActiveRecord::Base
    def sum
    @suma = Result.all(:select => "committee_id, SUM(amount) as wynik",
                       :group => "committee_id")
-   end
+   return @suma
+  end
 
    belongs_to :committee
    belongs_to :constituency
