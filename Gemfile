@@ -44,6 +44,6 @@ group :development, :test do
   gem 'activeadmin', github: 'activeadmin'
   gem 'devise'
   gem 'cancancan', '~> 1.10'
- # gem 'activeadmin-cancan'
+  gem 'bootstrap-sass', '~> 3.1.1'
 end
 
