@@ -11,13 +11,13 @@
     </tr>
   </thead>
 
-  <tbody>
-  <% @results.each do |result| %>
-          <tr>
-        <td><%= result.suma.committee_id %></td>
-        <td><%= result.suma.wynik %></td>
+  <tbody> 
+    <% @result.each do |result| %>
+      <tr>
+        <td><%= result.committee.name %></td>
+        <td><%= result.wynik %></td>
       </tr>
-    <% end %>
+   <% end %>
   </tbody>
 </table>
 <br>

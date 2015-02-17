@@ -53,10 +53,9 @@ end
 end
 
 def sum
-  @suma
-  redirect_to(results_path)
+  @result = Result.select('committee_id, sum(amount) as wynik').group('committee_id')
 end
-logger.debug { @suma.inspect }   
+   
 
   private
 

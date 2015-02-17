@@ -20,11 +20,12 @@
         <td><%= result.amount %></td>
         <td><%= link_to 'Wyświetl', result %></td>
         <td><%= link_to 'Edytuj', edit_result_path(result) %></td>
-        <td><%= link_to 'Usuń', result, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Usuń', result, method: :delete, data: { confirm: 'Jesteś pewien?' } %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 <br>
 
-<%= link_to 'New Result', new_result_path %>
+<%= link_to 'Dodaj wynik', new_result_path %>
+
