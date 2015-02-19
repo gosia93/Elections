@@ -1,11 +1,9 @@
 <body>
-<section id="intro" class="intro-section">
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-12">
-        <h1>Witaj!</h1>
-        <a class="btn-default page-scroll"><%= link_to 'Okręgi', constituencies_path(@constituency) %></a>  
-
+  <div id="header">
+    <h1>Witaj!</h1>
+  </div>
+  <div id="content">
+     <div id="menu">
        <ul>
         <% if current_user.admin? %>
           <li>
@@ -24,8 +22,7 @@
         </ul>
       </div>
     </div>
-   </div>
-    <div class="footer">
+    <div id="footer">
       <h6>Małgorzata Koselak, EPI UJ</h6>
     </div>
 </div>

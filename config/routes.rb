@@ -10,10 +10,10 @@ Rails.application.routes.draw do
   resources :committees
   resources :constituencies
   resources :results 
- # get 'sum' => 'results#sum', :name=> 'suma'
+ get 'results/sum'
   
    authenticated :user do
-    root :to => 'results#sum', as: :authenticated_root
+    root :to => 'welcome#index_admin', as: :authenticated_root
   end
    
     root :to => 'welcome#index'

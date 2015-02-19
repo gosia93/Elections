@@ -1,21 +1,16 @@
+
 <%= form_for(@committee) do |f| %>
   <% if @committee.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@committee.errors.count, "error") %> prohibited this committee from being saved:</h2>
-
-      <ul>
-      <% @committee.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
+    <div class="alert alert-danger" role="alert">
+      <h4>Dane są niepoprawne!</h4>
     </div>
   <% end %>
-
   <div class="field">
-    <p>Nazwa:</p>
-    <%= f.text_field :name %>
+     <%= f.text_field :name, class: 'form-control', autofocus: true, placeholder:"Nazwa" %>
+  </div></br>
+  <div class="action">
+         <%= f.submit "Potwierdź", class: "btn btn-info" %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-<% end %>
+     <% end %>
+  </form>
+</div>

@@ -1,6 +1,10 @@
-<h1>Editing Committee</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @committee %> |
-<%= link_to 'Back', committees_path %>
+<div class="container">  
+  <div class="panel-heading"><h2 class="intro-text text-center">Edytuj komitet</h2></div>
+    <p class="intro-text text-center">
+      <%= render 'form' %>
+      <%= link_to 'Show', @committee %>
+    </p>
+    <ul class="pager"> 
+      <li><%= link_to 'Powrót', committees_path %></li>
+    </ul>
+</div>

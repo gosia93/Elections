@@ -1,146 +1,88 @@
+
 <!DOCTYPE html>
-<html>
-<head>
-  <title>System liczenia głosów w wyborach</title>
-  <!--<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>-->
-  <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/scrolling-nav.css" rel="stylesheet">
-  <%= csrf_meta_tags %>
-</head>
-<body>
-<% if user_signed_in? %>
-   <%= current_user.email %>. 
-   <%= link_to "Edytuj profil", edit_user_registration_path %>
-   <%= link_to "Wyloguj", destroy_user_session_path, :method => :delete %>
-<% else %>
-   <%= link_to "Zarejestruj", new_user_registration_path %> or <%= link_to "Zaloguj", new_user_session_path %>
-<% end %>
-
-<% flash.each do |name, msg| %>
-   <%= content_tag :div, msg, id: "flash_#{name}" %>
-<% end %>   
-<%= yield %>
-
-<!--</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-
+<html lang="pl">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
--->
-  <!--  <title>Scrolling Nav - Start Bootstrap Template</title>
- 
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <title>System liczenia głosów w wyborach</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+ <!--header-->
+    <div class="page-header">
+      <h3>System liczenia głosów </br>
+        <small> 
+          <% if user_signed_in? %>
+            <%= current_user.email %>.  
+       </small>
+      </h3>
+      <div class="panel panel-default">
+      <div class="p">
+          <%= link_to "Edytuj profil", edit_user_registration_path %>         
+      </div>
+      <div class="p">    
+          <%= link_to "Wyloguj", destroy_user_session_path, :method => :delete %>
+      </div> 
+       <% else %>
+         <%= link_to "Zarejestruj", new_user_registration_path %>   <%= link_to "Zaloguj", new_user_session_path %>
+       <% end %>
+     </div> 
+  </div>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, id: "flash_#{name}" %>
+    <% end %>
+    <% if user_signed_in? %>
 
- 
-    <link href="css/scrolling-nav.css" rel="stylesheet">
+<!--navbar-->
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
- 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
+    <nav class="navbar navbar-default">
+     <div class="container-fluid">
+       <div class"navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+           <span class="sr-only"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+           <span class="icon-bar"></span>
+         </button>
+       </div>
 
- 
-    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">Start Bootstrap</a>
-            </div>
-
-            <div class="collapse navbar-collapse navbar-ex1-collapse">
-                <ul class="nav navbar-nav">
-
-                    <li class="hidden">
-                        <a class="page-scroll" href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">About</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#services">Services</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-    </nav>
-
-
-    <section id="intro" class="intro-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Scrolling Nav</h1>
-                    <p><strong>Usage Instructions:</strong> Make sure to include the <code>scrolling-nav.js</code>, <code>jquery.easing.min.js</code>, and <code>scrolling-nav.css</code> files. To make a link smooth scroll to another section on the page, give the link the <code>.page-scroll</code> class and set the link target to a corresponding ID on the page.</p>
-                    <a class="btn btn-default page-scroll" href="#about">Click Me to Scroll Down!</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="about" class="about-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>About Section</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section id="services" class="services-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Services Section</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-
- <section id="contact" class="contact-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <h1>Contact Section</h1>
-                </div>
-            </div>
-        </div>
-    </section>
-
-  <script src="js/jquery.js"></script>
+       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+         <ul class="nav nav-pills nav-justified">
+         <% if user_signed_in? %>
+          <% if current_user.admin? %> 
+           <li role="presentation" class="active">
+             <%= link_to 'Użytkownicy', users_path(@user) %>
+           </li>
+          <% end %>
+         <% end %>
+            <li role="presentation" class="active">
+             <%= link_to 'Okręgi',  constituencies_path(@constituency) %>
+           </li>
+             <li role="presentation" class="active">
+              <%= link_to 'Komitety', committees_path(@committee) %>
+            </li>
+             <li role="presentation" class="active">
+               <%= link_to 'Wyniki', results_path(@result) %>
+             </li>                  
+           </ul>
+         </div>
+        <!--/.navbar-collapse-->
+       </div>
+       <!--/.container-fluid-->        
+     </nav>
+    <% end %>
+  </div>
+  <div class="container"></div>
+  <footer class="footer">
+     <p>Małgorzata Koselak EPI UJ 2015</p>
+  </footer>  
+   <!-- /.container -->
 
 
-    <script src="js/bootstrap.min.js"></script>
+  <%= yield %>
 
-    
-    <script src="js/jquery.easing.min.js"></script>
-    <script src="js/scrolling-nav.js"></script>
 
-</body>
-
-</html> -->
+     
