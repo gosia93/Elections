@@ -1,6 +1,14 @@
-<h1>Editing Result</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Show', @result %> |
-<%= link_to 'Back', results_path %>
+<div class="container">
+  <div class="panel-heading"><h3 class="intro-text text-center">Edytuj Wyniki</div>
+    <div class="col-md-offset-6">
+      <%= render 'form' %>
+      <div class="add">
+        <%= link_to 'Wyświetl', @result, class: "btn btn-primary" %>
+      </div>
+    </div>
+    <div>
+       <ul class="pager">
+         <li><%= link_to 'Powrót', results_path %></li>
+       </ul>
+     </div>
+</div>

@@ -1,12 +1,17 @@
 <div class="container">
     <div class="panel-heading">
-     <h2 class="intro-text text-center"><%= @committee.name %></h2>
+      <h2 class="intro-text text-center"><%= @committee.name %></h2>
     </div>
-    <p class="intro-text text-center">   
-      <%= link_to 'Edytuj', edit_committee_path(@committee) %>
-    </p> 
+    <div class="intro-text text-center">
+      <%= image_tag @committee.logo.url(:medium) %>
+    </div>
+    <div class="add">   
+      <%= link_to 'Edytuj', edit_committee_path(@committee), class: "btn btn-primary" %>
+    </div> 
+    <div>
     <ul class="pager">
       <li><%= link_to 'Powrót', committees_path %></li>
     </ul>
+   </div>
 </div>
 

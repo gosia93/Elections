@@ -23,7 +23,7 @@
 	    <td><%= constituency.seats %></td>
 	    <td><%= constituency.electors %></td>
             <td><%= link_to 'Wyświetl', constituency %></td>
-            <td><%= link_to 'Edytuj', edit_constituency_path(constituency) %></td>							
+            <td><%= link_to 'Edytuj', edit_constituency_path (constituency) %></td>							
             <td><%= link_to 'Usuń', constituency, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 	  </tr>
         <% end %>
@@ -31,8 +31,8 @@
      </table>
     </div>
   </div>
-      <div class= "col-xs-offset-11">
-         <%= link_to 'Dodaj', new_constituency_path, class: "btn btn-primary" %>
-      </div>
- </div>
+</div>
+<p class= "intro-text text-center">
+  <%= link_to 'New Constituency', new_constituency_path %>
+</p>
 </div>

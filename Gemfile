@@ -46,6 +46,6 @@ group :development, :test do
   gem 'cancancan', '~> 1.10'
   gem 'bootstrap-sass', '~> 3.2.0.2'
   gem 'autoprefixer-rails'
-#  gem 'sprockets', '~> 3.0'
+  gem "paperclip", "~> 4.2"
 end
 

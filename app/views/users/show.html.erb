@@ -1,31 +1,41 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+    <div class="panel-heading">
+     <h3 class="intro-text text-center"><%= @user.email %></h3>
+    </div>
+    <div class="show">
+      <p>
+        <strong>Rola:</strong>
+        <%= @user.role.name %>
+      </p>
+      <p>
+        <strong>Nazwa:</strong>
+        <%= @user.name %>
+      </p>
+      <p>
+        <strong>Dołączył:</strong>
+        <%= @joined_on %>
+      </p>
+      <p>
+        <strong>Ostatnie logowanie:</strong>
+        <%= @last_login %>
+      </p>
+      <p>
+        <strong>Liczba logowań:</strong>
+        <%= @user.sign_in_count %>
+      </p>
+    </div>
+    <div>
+      <p class="intro-text text-center">
+        <%= link_to 'Edytuj', edit_user_path(@user), class: "btn btn-primary" %>
+      </p>
+    </div>
+    <div>
+      <ul class="pager">
+        <li><%= link_to 'Powrót', users_path %></li>
+      </ul>
+   </div>
+</div>
 
-<p>
-  <strong>Nazwa:</strong>
-  <%= @user.name %>
-</p>
 
-<p>
-  <strong>Rola:</strong>
-  <%= @user.role.name %>
-</p>
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
-<p>
-  <strong>Joined on:</strong>
-  <%= @joined_on %>
-</p>
-<p>
-  <strong>Ostatnie logowanie:</strong>
-    <%= @last_login %>
-</p>
-<p>
-  <strong>No. times logges in:</strong>
-  <%= @user.sign_in_count %>
-</p>
-
-<%= link_to 'Edytuj', edit_user_path(@user) %> |
-<%= link_to 'Wróć', users_path %>

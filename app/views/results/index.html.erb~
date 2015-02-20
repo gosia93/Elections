@@ -15,7 +15,7 @@
 	  <tbody>
 	  <% @results.each do |result| %>
 	      <tr>
-		<td><%= result.committee_id %></td>
+		<td><%= result.committee.name %></td>
 		<td><%= result.constituency.name %></td>
 		<td><%= result.amount %></td>
 		<td><%= link_to 'Wyświetl', result %></td>
@@ -28,8 +28,8 @@
       </div>
     </div>
   </div>
-  <div class= "col-xs-offset-11">
-    <%= link_to 'Dodaj wyniki', new_result_path, class: "btn btn-primary" %>
+  <div class= "intro-text text-center">
+    <%= link_to 'New Constituency', new_result_path %>
   </div>
 </div>
 

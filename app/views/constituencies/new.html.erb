@@ -1,5 +1,15 @@
-<h1>Dodaj nowy okręg wyborczy</h1>
+<div class="container">
+    <div class="panel-info">
+      <h3 class="intro-text text-center">
+        Dodaj nowy okręg wyborczy
+      </h3>
+    </div>
+         <%= render 'form' %>
+   
+</div>
+   <div>
+    <ul class="pager">
+      <li><%= link_to 'Powrót', constituencies_path %></li>
+    </ul>
+</div>
 
-<%= render 'form' %>
-
-<%= link_to 'Wróć', constituencies_path %>

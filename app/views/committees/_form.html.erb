@@ -1,5 +1,5 @@
 
-<%= form_for(@committee) do |f| %>
+<%= form_for @committee, html: { multipart: true } do |f| %>
   <% if @committee.errors.any? %>
     <div class="alert alert-danger" role="alert">
       <h4>Dane są niepoprawne!</h4>
@@ -7,8 +7,14 @@
   <% end %>
   <div class="field">
      <%= f.text_field :name, class: 'form-control', autofocus: true, placeholder:"Nazwa" %>
-  </div></br>
-  <div class="action">
+  </div>
+  <div class="field" id="browse">
+   <p>
+      <strong>Logo:</strong>
+      <%= f.file_field :logo %>
+   </p>
+   </div>
+  <div class="action intro-text text-center">
          <%= f.submit "Potwierdź", class: "btn btn-info" %>
   </div>
      <% end %>

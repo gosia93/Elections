@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Wyniki</h1>
+<div class="container">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Komitet</th>
+      <th>Głosy</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody> 
+    <% @result.each do |result| %>
+      <tr>
+        <td><%= result.committee.name %></td>
+        <td><%= result.wynik %></td>
+      </tr>
+   <% end %>
+  </tbody>
+</table>
+<br>
+</div>

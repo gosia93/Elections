@@ -10,28 +10,28 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <p>Numer:</p>
-    <%= f.number_field :number %>
+<div class="field col-md-3 form-group">
+    <label>Numer:</label>
+    <%= f.number_field :number, class: "form-control input-md" %>
   </div>
-  <div class="field">
-    <p>Nazwa:</p>
-    <%= f.text_field :name %>
+  <div class="field col-md-10 form-group">
+    <label>Nazwa:</label>
+    <%= f.text_field :name, class: "form-control input-md" %>
   </div>
-  <div class="field">
-    <p>Miejscowość:</p>
-    <%= f.text_field :town %>
+  <div class="field col-md-12 form-group">
+    <label>Miejscowość:</label>
+    <%= f.text_field :town, class: "form-control input-md" %>
   </div>
-  <div class="field">
-    <p>Ilość mandatów:</p>
-    <%= f.number_field :seats %>
+  <div class="field col-md-3 form-group">
+    <label>Liczba mandatów:</label>
+    <%= f.number_field :seats, class: "form-control input-md" %>
   </div>
-  <div class="field">
-    <p>Liczba osób uprawnionych do głosowania:</p>
-    <%= f.number_field :electors %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="field col-md-3 form-group">
+    <label>Liczba wyborców:</label>
+      <%= f.number_field :electors, class: "form-control input-md" %>
+    </div>
+  <div class="sm-offset-0 col-sm-10">
+    <%= f.submit "Potwierdź", class: "btn btn-info" %><br>
   </div>
 <% end %>
+

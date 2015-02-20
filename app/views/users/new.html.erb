@@ -1,5 +1,12 @@
-<h1>Nowy użytkownik</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Wróć', users_path %>
+<div class="container">
+  <div class="content">
+    <div class="panel-info"><h3 class="intro-text text-center">Nowy użytkownik</h3>
+       <div class="col-md-offset-6">
+         <%= render 'form' %>
+       </div>
+    </div>
+    <div>
+      <ul class="pager">
+        <li><%= link_to 'Wróć', users_path %></li>
+      </ul>
+</div>

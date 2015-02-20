@@ -1,6 +1,12 @@
-<h1>Edytuj użytkownika</h1>
-
-<%= render 'form' %>
-
-<%= link_to 'Wyświetl', @user %> |
-<%= link_to 'Wróć', users_path %>
+<div class="container">
+  <div class="panel-heading"><h3 class="intro-text text-center">Edytuj użytkownika</div>
+    <div class="col-md-offset-6">
+      <%= render 'form' %>
+    </div>
+    <div class="add">
+      <%= link_to 'Wyświetl', @user, class: "btn btn-primary" %>
+    </div>
+    <ul class="pager">
+      <li><%= link_to 'Powrót', users_path %></li>
+    </ul>
+</div>

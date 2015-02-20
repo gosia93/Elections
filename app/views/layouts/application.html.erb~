@@ -11,17 +11,21 @@
     <%= csrf_meta_tags %>
   </head>
   <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
- <!--header-->
+
+<!--header-->
+
     <div class="page-header">
-      <h3>System liczenia głosów </br>
+      <h2>System liczenia głosów </br>
         <small> 
           <% if user_signed_in? %>
-            <%= current_user.email %>.  
+            <%= current_user.email %>  
        </small>
-      </h3>
-      <div class="panel panel-default"> 
-          <%= link_to "Edytuj profil", edit_user_registration_path %>         
+      </h2>
+      <div class="panel panel-default">
+      <div class="col-xs-offset-10">
+          <%= link_to "Edytuj profil", edit_user_registration_path %> |             
           <%= link_to "Wyloguj", destroy_user_session_path, :method => :delete %>
+      </div> 
        <% else %>
          <%= link_to "Zarejestruj", new_user_registration_path %>   <%= link_to "Zaloguj", new_user_session_path %>
        <% end %>
@@ -70,11 +74,20 @@
        <!--/.container-fluid-->        
      </nav>
     <% end %>
-    
-   <!-- /.container -->
+  </div>
+  <div class "container">
+     <%= yield %>
+  </div>
+ </body>
 
+<!--footer-->
 
-  <%= yield %>
+  <footer class="footer">
+      <div class="container">
+        <p class="text-muted text-right">&copy; 2015 m.koselak EPI UJ | Wszystkie prawa zastrzeżone.</p>
+      </div>
+  </footer>
+</html>   
 
 
      

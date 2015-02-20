@@ -12,17 +12,17 @@
 
   <div class="field">
     <%= f.label :committee_id %><br>
-    <%= collection_select(:result, :committee_id, Committee.all, :id, :name, {prompt:true}), class: "form-control input-lg col-sx-6"%>
+    <%= collection_select(:result, :committee_id, Committee.all, :id, :name, {prompt:true}) %>
   </div>
   <div class="field">
     <%= f.label :constituency_id %><br>
-    <%= collection_select(:result, :constituency_id, Constituency.all, :id, :name, {prompt:true}), class: "form-control input-lg col-sx-6" %>
+    <%= collection_select(:result, :constituency_id, Constituency.all, :id, :name, {prompt:true}) %>
   </div>
   <div class="field">
     <%= f.label :amount %><br>
-    <%= f.number_field :amount, class: "form-control input-lg col-sx-4" %>
+    <%= f.number_field :amount %>
   </div>
   <div class="actions">
-    <%= f.submit "Potwierdź", class: "btn btn-info" %>
+    <%= f.submit %>
   </div>
 <% end %>

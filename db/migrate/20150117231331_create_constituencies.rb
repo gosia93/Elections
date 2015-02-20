@@ -6,8 +6,10 @@ class CreateConstituencies < ActiveRecord::Migration
       t.string :town
       t.integer :seats
       t.integer :electors
-
       t.timestamps null: false
     end
+  end
+  change_table :constituencies do |t|
+     t.remove :name
   end
 end

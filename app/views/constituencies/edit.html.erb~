@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="panel-heading"><h3 class="intro-text text-center">Edytuj Okręg</div>
+    <div class="intro-text text-center">
+      <%= render 'form' %>
+      <div>
+        <%= link_to 'Wyświetl', @constituency %>
+      </div>
+    </div>
+    <div>
+       <ul class="pager">
+         <li><%= link_to 'Back', constituencies_path %></li>
+       </ul>
+     </div>
+</div>
+

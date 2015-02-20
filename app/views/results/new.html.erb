@@ -1,4 +1,17 @@
-<h1>New Result</h1>
-
-<%= render 'form' %>
-<%= link_to 'Back', results_path %>
+<div class="container">
+  <div class="content">
+    <div class="panel-info">
+      <h3 class="intro-text text-center">
+        Dodaj wyniki
+      </h3>
+    </div>
+    <div class="col-md-offset-6">
+      <%= render 'form' %>
+    </div>
+  </div>
+  <div>
+    <ul class="pager">
+      <li><%= link_to 'Powrót', results_path %></li>
+    </ul>
+  </div>
+</div>

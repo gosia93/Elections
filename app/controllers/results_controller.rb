@@ -54,6 +54,8 @@ end
 
 def sum
   @result = Result.select('committee_id, sum(amount) as wynik').group('committee_id')
+  
+
 end
    
 

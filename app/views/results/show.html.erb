@@ -1,19 +1,27 @@
-<p id="notice"><%= notice %></p>
-  
-<p>
-  <strong>Komitet:</strong>
-  <%= @result.committee.name %>
-</p>
-
-<p>
-  <strong>Okręg:</strong>
-  <%= @result.constituency.name %>
-</p>
-
-<p>
-  <strong>Głosy:</strong>
-  <%= @result.amount %>
-</p>
-
-<%= link_to 'Edytuj', edit_result_path(@result) %> |
-<%= link_to 'Wróć', results_path %>
+<div class="container">
+  <p id="notice"><%= notice %></p>
+    <div class="panel-heading">
+      <h3 class="intro-text text-center"><%= @result.committee.name %></h3>
+    </div>
+<%= debug(@result) %>
+    <div class="show">
+      <p>
+        <strong>Okręg:</strong>
+        <%= @result.constituency.name %>
+      </p>
+      <p>
+       <strong>Głosy:</strong>
+       <%= @result.amount %>
+      </p>
+    </div>
+    <div>
+      <p class="intro-text text-center">
+        <%= link_to 'Edytuj', edit_result_path(@result), class: "btn btn-primary" %>
+      </p>
+    </div>
+    <div>
+      <ul class="pager">
+        <li><%= link_to 'Powrót', results_path %></li>
+      </ul>
+    </div>
+</div>
