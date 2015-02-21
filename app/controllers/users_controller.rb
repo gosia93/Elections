@@ -48,7 +48,7 @@ load_and_authorize_resource
         format.html { redirect_to @user, notice: 'Konto zostało zmienione.' }
         format.json { head :no_content }
       else
-        format.html { render action: 'edytuj' }
+        format.html { render action: 'edit' }
         format.json {render json: @user.errors, status: :unprocessable_entity }
       end
      end

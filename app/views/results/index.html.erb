@@ -1,5 +1,5 @@
-<p id="notice"><%= notice %></p>
 <div class="container">
+<p id="notice"><%= notice %></p>
   <div class="table-responsive">
     <div class="panel panel-default">
       <div class="panel-heading">Wyniki</div>
@@ -20,17 +20,20 @@
 		<td><%= result.amount %></td>
 		<td><%= link_to 'Wyświetl', result %></td>
 		<td><%= link_to 'Edytuj', edit_result_path(result) %></td>
-		<td><%= link_to 'Usuń', result, method: :delete, data: { confirm: 'Jesteś pewien?' }, class:"alert alert-warning" %></td>
+		<td><%= link_to 'Usuń', result, method: :delete, data: { confirm: 'Jesteś pewien?' } %></td>
 	      </tr>
 	    <% end %>
 	  </tbody>
 	</table>
       </div>
     </div>
-  </div>
   <div class= "col-xs-offset-11">
-    <%= link_to 'Dodaj wyniki', new_result_path, class: "btn btn-primary" %>
+    <%= link_to 'Dodaj', new_result_path, class: "btn btn-primary" %>
   </div>
+  <div class="col-lg-offset-4">
+    <%= link_to 'Wyniki komitetów', result_path('sum'), class: "btn btn-info col-xs-6" %>
+  </div>
+</div>
 </div>
 
 

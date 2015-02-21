@@ -3,15 +3,14 @@
     <div class="panel-heading">
       <h3 class="intro-text text-center"><%= @result.committee.name %></h3>
     </div>
-<%= debug(@result) %>
-    <div class="show">
+    <div class="intro-text text-center">
       <p>
-        <strong>Okręg:</strong>
-        <%= @result.constituency.name %>
+       <h4><strong>Okręg nr</strong>
+        <%= @result.constituency.number %></h4>
       </p>
       <p>
-       <strong>Głosy:</strong>
-       <%= @result.amount %>
+      <h4> <strong>Głosy otrzymane w okręgu:</strong>
+       <%= @result.amount %></h4>
       </p>
     </div>
     <div>

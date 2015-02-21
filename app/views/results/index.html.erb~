@@ -1,5 +1,5 @@
-<p id="notice"><%= notice %></p>
 <div class="container">
+<p id="notice"><%= notice %></p>
   <div class="table-responsive">
     <div class="panel panel-default">
       <div class="panel-heading">Wyniki</div>
@@ -15,22 +15,25 @@
 	  <tbody>
 	  <% @results.each do |result| %>
 	      <tr>
-		<td><%= result.committee.name %></td>
+		<td><%= result.committee_id %></td>
 		<td><%= result.constituency.name %></td>
 		<td><%= result.amount %></td>
 		<td><%= link_to 'Wyświetl', result %></td>
 		<td><%= link_to 'Edytuj', edit_result_path(result) %></td>
-		<td><%= link_to 'Usuń', result, method: :delete, data: { confirm: 'Jesteś pewien?' }, class:"alert alert-warning" %></td>
+		<td><%= link_to 'Usuń', result, method: :delete, data: { confirm: 'Jesteś pewien?' } %></td>
 	      </tr>
 	    <% end %>
 	  </tbody>
 	</table>
       </div>
     </div>
+  <div class= "col-xs-offset-10">
+    <%= link_to 'Dodaj', new_result_path, class: "btn btn-primary" %>
   </div>
-  <div class= "intro-text text-center">
-    <%= link_to 'New Constituency', new_result_path %>
+  <div class="col-lg-6">
+    <%= link_to 'Wyniki komitetów', result_path('sum'), class: "btn btn-primary" %>
   </div>
+</div>
 </div>
 
 

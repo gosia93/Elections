@@ -11,25 +11,25 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class="field col-md-6 form-group">
     <%= f.label :name %><br>
-    <%= f.text_field :name, class: "form-control input-lg col-sx-4" %>
+    <%= f.text_field :name, class: "form-control input-md" %>
   </div>
-  <div class="field">
-    <%= f.label :role_id %><br>
-    <%= collection_select(:user, :role_id, Role.all, :id, :name, {prompt: true}), class: "form-control input-lg col-sx-4" %>
+   <div class="field col-md-4 form-group">
+    <%= f.label :role_id, "Rola" %><br>
+    <%= collection_select(:user, :role_id, Role.all, :id, :name, {prompt: true}, class: "form-control input-md") %>
   </div>
-  <div class="field">
+  <div class="field col-md-6 form-group">
     <%= f.label :email %><br>
-    <%= f.text_field :email, class: "form-control input-lg col-sx-6" %>
+    <%= f.text_field :email, class: "form-control input-md" %>
   </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.text_field :password, placeholder: "zostaw puste, jeśli nie zmieniasz hasła", class: "form-control input-lg col-sx-4" %>
+  <div class="field col-md-6 form-group">
+    <%= f.label :password, "Hasło" %><br>
+    <%= f.text_field :password, placeholder: "zostaw puste, jeśli nie zmieniasz hasła", class: "form-control input-md" %>
   </div>
 
 
-  <div class="actions">
-    <%= f.submit, class: "btn btn-info" %>
+  <div class="sm-offset-0 col-sm-10">
+    <%= f.submit "Potwierdź", class: "btn btn-info" %>
   </div>
 <% end %>

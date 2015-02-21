@@ -9,18 +9,24 @@ Rails.application.routes.draw do
   resources :roles
   resources :committees
   resources :constituencies
+
   resources :results do
 
     collection do
+
        get :sum
+
     end
 
   end
 
    authenticated :user do
+
     root :to => 'welcome#index_admin', as: :authenticated_root
+
   end
-    root :to => 'users#sign_in'   
+
+    root :to => 'welcome#index'   
 
 end
 

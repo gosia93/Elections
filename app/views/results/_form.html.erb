@@ -10,19 +10,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :committee_id %><br>
-    <%= collection_select(:result, :committee_id, Committee.all, :id, :name, {prompt:true}), class: "form-control input-lg col-sx-6"%>
+  <div class="field col-md-8 form-group">
+    <%= f.label :committee_id, "Komitet" %><br>
+    <%= collection_select(:result, :committee_id, Committee.all, :id, :name, {prompt:true}, class: "form-control input-md" ) %>
   </div>
-  <div class="field">
-    <%= f.label :constituency_id %><br>
-    <%= collection_select(:result, :constituency_id, Constituency.all, :id, :name, {prompt:true}), class: "form-control input-lg col-sx-6" %>
+  <div class="field col-md-8 form-group">
+    <%= f.label :constituency_id," Okręg" %><br>
+    <%= collection_select(:result, :constituency_id, Constituency.all, :id, :name, {prompt:true}, class: "form-control input-md" ) %>
   </div>
-  <div class="field">
-    <%= f.label :amount %><br>
-    <%= f.number_field :amount, class: "form-control input-lg col-sx-4" %>
+  <div class="field col-md-3 form-group">
+    <%= f.label :amount, "Głosy" %><br>
+    <%= f.number_field :amount, class: "form-control input-md" %>
   </div>
-  <div class="actions">
+  <div class="sm-offset-0 col-sm-10">
     <%= f.submit "Potwierdź", class: "btn btn-info" %>
   </div>
 <% end %>
