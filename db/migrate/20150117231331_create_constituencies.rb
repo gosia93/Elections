@@ -9,7 +9,4 @@ class CreateConstituencies < ActiveRecord::Migration
       t.timestamps null: false
     end
   end
-  change_table :constituencies do |t|
-     t.remove :name
-  end
 end
