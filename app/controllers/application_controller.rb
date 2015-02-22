@@ -13,4 +13,12 @@ class ApplicationController < ActionController::Base
      devise_parameter_sanitizer.for(:sign_up) << :name
      devise_parameter_sanitizer.for(:account_update) << :name
   end
+  rescue_from ActiveRecord::RecordNotFound, 
+  :with => :record_not_found 
+  
+  private 
+  
+  def record_not_found 
+    render :text => "404 Not Found", :status => 404 
+ end
 end
