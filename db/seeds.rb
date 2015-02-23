@@ -8,7 +8,7 @@
 r1 = Role.create({name: "Zwykły"})
 r2 = Role.create({name: "Admin"})
 
-u1 = User.create({name: "Anna", email: "anna@mailer.com", password: "password", password_confirmation: "password", role_id: r1.id})
-u2 = User.create({name: "Jan", email: "jan@mailer.com", password: "password", password_confirmation: "password", role_id: r2.id})
+u1 = User.create({name: "user1", email: "user1@mailer.com", password: "password", password_confirmation: "password", role_id: r1.id})
+u2 = User.create({name: "user2", email: "user2@mailer.com", password: "password", password_confirmation: "password", role_id: r1.id})
 u3 = User.create({name: "admin", email: "admin@mailer.com", password: "password", password_confirmation: "password", role_id: r2.id})
 

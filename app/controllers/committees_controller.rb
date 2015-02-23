@@ -31,7 +31,7 @@ class CommitteesController < ApplicationController
 
     respond_to do |format|
       if @committee.save
-        format.html { redirect_to @committee, notice: 'Committee was successfully created.' }
+        format.html { redirect_to @committee, notice: 'Dodano nowy Komitet.' }
         format.json { render :show, status: :created, location: @committee }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class CommitteesController < ApplicationController
   def update
     respond_to do |format|
       if @committee.update(committee_params)
-        format.html { redirect_to @committee, notice: 'Committee was successfully updated.' }
+        format.html { redirect_to @committee, notice: 'Zmienino dane.' }
         format.json { render :show, status: :ok, location: @committee }
       else
         format.html { render :edit }
@@ -59,7 +59,7 @@ class CommitteesController < ApplicationController
   def destroy
     @committee.destroy
     respond_to do |format|
-      format.html { redirect_to committees_url, notice: 'Committee was successfully destroyed.' }
+      format.html { redirect_to committees_url, notice: 'Komitet został usunięty.' }
       format.json { head :no_content }
     end
   end

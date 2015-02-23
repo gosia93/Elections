@@ -2,7 +2,11 @@
 <%= form_for @committee, html: { multipart: true } do |f| %>
   <% if @committee.errors.any? %>
     <div class="alert alert-danger" role="alert">
-      <h4>Dane są niepoprawne!</h4>
+      <ul>
+        <% @commitee.errors.full_messages.each do |msg| %>
+          <li> <%= msg %></li>
+        <% end %>
+      </ul>
     </div>
   <% end %>
   <div class="field">

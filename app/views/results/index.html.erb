@@ -15,7 +15,7 @@
 	  <tbody>
 	  <% @results.each do |result| %>
 	      <tr>
-		<td><%= result.committee_id %></td>
+		<td><%= result.committee.name %></td>
 		<td><%= result.constituency.name %></td>
 		<td><%= result.amount %></td>
 		<td><%= link_to 'Wyświetl', result %></td>

@@ -1,7 +1,8 @@
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+    <div id="error_explanation" class="alert alert-danger" role="alert">
+
+      <h2> Wystąpiły Błędy:</h2>
 
       <ul>
       <% @user.errors.full_messages.each do |message| %>
@@ -25,7 +26,7 @@
   </div>
   <div class="field col-md-6 form-group">
     <%= f.label :password, "Hasło" %><br>
-    <%= f.text_field :password, placeholder: "zostaw puste, jeśli nie zmieniasz hasła", class: "form-control input-md" %>
+    <%= f.text_field :password, class: "form-control input-md", type: "password" %>
   </div>
 
 

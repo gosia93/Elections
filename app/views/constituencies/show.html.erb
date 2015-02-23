@@ -1,7 +1,7 @@
 <div class="container">
-  <p id="notice"><%= notice %></p>
-    <div class="panel-heading">
-      <h3 class="intro-text text-center"><%= @constituency.name %></h3>
+  <div class="col-md-offset-5">
+   <div class="panel-heading">
+      <h3<%= @constituency.name %></h3>
     </div>
     <div class=".col-md-push-6">
       <p>
@@ -26,9 +26,11 @@
 	<%= link_to 'Edytuj', edit_constituency_path(@constituency), class: "btn btn-primary" %> 
       </p>
     </div>
-    <div>
-      <ul class="pager">
-	<li><%= link_to 'Powrót', constituencies_path %></li>
-      </ul>
-    </div>
+  </div>
 </div>
+ <div>
+  <ul class="pager">
+    <li><%= link_to 'Powrót', constituencies_path %></li>
+  </ul>
+</div>
+

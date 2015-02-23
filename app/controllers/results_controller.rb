@@ -47,7 +47,7 @@ end
 def destroy
 @result.destroy
 respond_to do |format|
-format.html { redirect_to results_url, notice: 'Wynik usunięto.' }
+format.html { redirect_to results_url, notice: 'Wynik został usunięty.' }
 format.json { head :no_content }
 end
 end

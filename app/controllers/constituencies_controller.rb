@@ -29,7 +29,7 @@ class ConstituenciesController < ApplicationController
 
     respond_to do |format|
       if @constituency.save
-        format.html { redirect_to @constituency, notice: 'Constituency was successfully created.' }
+        format.html { redirect_to @constituency, notice: 'Dodano okręg.' }
         format.json { render :show, status: :created, location: @constituency }
       else
         format.html { render :new }
@@ -43,7 +43,7 @@ class ConstituenciesController < ApplicationController
   def update
     respond_to do |format|
       if @constituency.update(constituency_params)
-        format.html { redirect_to @constituency, notice: 'Constituency was successfully updated.' }
+        format.html { redirect_to @constituency, notice: 'Zmieniono dane.' }
         format.json { render :show, status: :ok, location: @constituency }
       else
         format.html { render :edit }
@@ -57,7 +57,7 @@ class ConstituenciesController < ApplicationController
   def destroy
     @constituency.destroy
     respond_to do |format|
-      format.html { redirect_to constituencies_url, notice: 'Constituency was successfully destroyed.' }
+      format.html { redirect_to constituencies_url, notice: 'Okręg został usunięty.' }
       format.json { head :no_content }
     end
   end
