@@ -5,9 +5,9 @@
     <div class="intro-text text-center">
       <%= image_tag @committee.logo.url(:medium) %>
     </div>
-    <div class="add">   
+    <p class="intro-text text-center">   
       <%= link_to 'Edytuj', edit_committee_path(@committee), class: "btn btn-primary" %>
-    </div> 
+    </p> 
     <div>
     <ul class="pager">
       <li><%= link_to 'Powrót', committees_path %></li>
